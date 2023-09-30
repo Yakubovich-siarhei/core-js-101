@@ -5,7 +5,6 @@
  *                                                                                           *
  ******************************************************************************************* */
 
-
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -18,15 +17,10 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
-
-
-
-  
-
+function concatenateStrings(value1, value2) {
+  // throw new Error('Not implemented');
+  return String(value1 + value2);
 }
-
 
 /**
  * Returns the length of given string.
@@ -39,8 +33,9 @@ function concatenateStrings(/* value1, value2 */) {
  *   'b'     => 1
  *   ''      => 0
  */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(value) {
+  // throw new Error("Not implemented");
+  return value.length
 }
 
 /**
@@ -56,8 +51,9 @@ function getStringLength(/* value */) {
  *   'John','Doe'      => 'Hello, John Doe!'
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
-function getStringFromTemplate(/* firstName, lastName */) {
-  throw new Error('Not implemented');
+function getStringFromTemplate(firstName, lastName ) {
+  // throw new Error("Not implemented");
+  return ("Hello, "+firstName + " "+lastName+"!")
 }
 
 /**
@@ -71,9 +67,8 @@ function getStringFromTemplate(/* firstName, lastName */) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
-
 
 /**
  * Returns a first char of the given string.
@@ -86,7 +81,7 @@ function extractNameFromTemplate(/* value */) {
  *   'cat'       => 'c'
  */
 function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -101,7 +96,7 @@ function getFirstChar(/* value */) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -116,7 +111,7 @@ function removeLeadingAndTrailingWhitespaces(/* value */) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(/* value, count */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -132,7 +127,7 @@ function repeatString(/* value, count */) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -147,9 +142,8 @@ function removeFirstOccurrences(/* str, value */) {
  *   '<a>' => 'a'
  */
 function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
-
 
 /**
  * Converts all characters of the specified string into the upper case
@@ -162,7 +156,7 @@ function unbracketTag(/* str */) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(/* str */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -181,7 +175,7 @@ function convertToUpperCase(/* str */) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(/* str */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -208,9 +202,8 @@ function extractEmails(/* str */) {
  *
  */
 function getRectangleString(/* width, height */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
-
 
 /**
  * Encode specified string with ROT13 cipher
@@ -229,7 +222,7 @@ function getRectangleString(/* width, height */) {
  *
  */
 function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
 
 /**
@@ -246,9 +239,8 @@ function encodeToRot13(/* str */) {
  *   isString(new String('test')) => true
  */
 function isString(/* value */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
-
 
 /**
  * Returns playid card id.
@@ -275,9 +267,8 @@ function isString(/* value */) {
  *   'K♠' => 51
  */
 function getCardId(/* value */) {
-  throw new Error('Not implemented');
+  throw new Error("Not implemented");
 }
-
 
 module.exports = {
   concatenateStrings,
