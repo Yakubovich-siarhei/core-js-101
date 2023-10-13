@@ -52,7 +52,7 @@ function getStringLength(value) {
  */
 function getStringFromTemplate(firstName, lastName) {
   // throw new Error("Not implemented");
-  return (`Hello, ${firstName} ${lastName}!`);
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -207,7 +207,6 @@ function getRectangleString(w, h) {
   return `${[top, ...Array(h - 2).fill(mid), bot].join('\n')}\n`;
 }
 
-
 /**
  * Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
@@ -224,8 +223,12 @@ function getRectangleString(w, h) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  const index1 = (x) => input.indexOf(x);
+  const translate1 = (x) => (index1(x) > -1 ? output[index1(x)] : x);
+  return str.split('').map(translate1).join('');
 }
 
 /**
@@ -241,8 +244,15 @@ function encodeToRot13(/* str */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  if (value === undefined) return false;
+  if (value === null) return false;
+  if (typeof value === 'string') return true;
+  if (typeof value !== 'string') {
+    const res = value.valueOf();
+    if (typeof res === 'string') return true;
+  }
+  return !value;
 }
 
 /**
@@ -272,7 +282,6 @@ function isString(/* value */) {
 function getCardId(/* value */) {
   throw new Error('Not implemented');
 }
-
 
 module.exports = {
   concatenateStrings,
